@@ -4,6 +4,9 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 
 import logo from "./data/MATANATO_LOGO.PNG"
 import elmar from "./data/elmar.PNG"
+
+import { BsFiletypeDoc, BsBank2, BsCurrencyDollar, BsPercent, BsFillPatchQuestionFill, BsClockHistory } from "react-icons/bs";
+
 // import plum from "./assets/plum.jpg"
 // import bath from "./assets/bath.webp"
 // import electrical from "./assets/electrical.jpeg"
@@ -159,16 +162,27 @@ function About() {
 }
 
 // ================= Benefits Section =================
+const benefits = [
+  { icon: <BsFiletypeDoc />, title: "Пошаговый план открытия LLC", desc: "Пошаговая инструкция с чёткой последовательностью действий и списком всех необходимых бумаг — вам не придётся искать информацию на разных сайтах." },
+  { icon: <BsBank2 />, title: "Инструкция по получению EIN и банковского счёта", desc: "Разбор популярных онлайн-банков и практические советы, как получить номер налогоплательщика и запустить финансовые операции даже без личного визита в США." },
+  { icon: <BsCurrencyDollar />, title: "Настройка приёма платежей (Stripe / PayPal)", desc: "Что нужно подготовить, как правильно заполнить анкеты и подключить платёжные системы, чтобы принимать деньги от клиентов по всему миру." },
+  { icon: <BsPercent />, title: "Минимизация рисков: налоговые и юридические нюансы", desc: "Руководство по базовым требованиям к отчётности, упрощённые объяснения IRS-форм, советы по снижению рисков блокировок и штрафов." },
+  { icon: <BsFillPatchQuestionFill />, title: "Поддержка: варианты консультаций и сопровождения", desc: "Доступ к чату поддержки, пошаговые консультации и дополнительные пакеты сопровождения для тех, кто хочет пройти путь быстрее." },
+  { icon: <BsClockHistory />, title: "Практические шаблоны и образцы документов", desc: "Готовые образцы договоров, писем для банков и налоговых органов, а также инструкции по их заполнению — экономия времени и отсутствие ошибок при подаче заявок." },
+];
+
 function Benefits() {
   return (
     <section className="bg-gray-50 py-10 px-4 md:px-10 rounded-2xl shadow-md max-w-6xl mx-auto">
-      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Why Choose Matanato?</h2>
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">Что вы получите сразу после регистрации?</h2>
+ <p className="text-md font-semibold text-center text-gray-800 mb-10">Всё необходимое в одном месте</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+       
         {benefits.map((item, index) => (
           <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow hover:shadow-md transition">
-            <div>{item.icon}</div>
+            <div className="text-3xl">{item.icon}</div>
             <div>
-              <h4 className="font-semibold text-lg text-gray-800">{item.title}</h4>
+              <h4 className="font-semibold text-lg text-red-700">{item.title}</h4>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>
           </div>
@@ -299,6 +313,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <About />
+      <Benefits />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
