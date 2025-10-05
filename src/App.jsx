@@ -192,55 +192,40 @@ function Benefits() {
   );
 }
 
-// // ================= Home =================
-// function Home() {
-//     const categories = [
-//     { name: "Kitchen Appliances", image: kitchen},
-//     { name: "Bathroom Parts", image: bath },
-//     { name: "Electrical", image: electrical },
-//     { name: "Plumbing", image: plum },
-//   ];
-//   return (
-//     <div>
-//       <Hero />
-//       <section className="max-w-5xl mx-auto px-4 py-8">
-//         <h2 className="text-2xl font-bold mb-4">Top Products</h2>
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//           {products.slice(0, 8).map(p => (
-//             <div key={p.tracking} className="bg-white rounded-lg shadow p-4">
-//               <img src={p.image} alt={p.name} className="w-full h-40 object-cover rounded mb-3" />
-//               <h3 className="font-semibold">{p.name}</h3>
-//               <p className="text-gray-600">${p.price}</p>
-//               <Link to={`/product/${p.tracking}`} className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded">
-//                 View Details
-//               </Link>
-//             </div>
-//           ))}
-//         </div>
-//         <div className="text-center mt-6">
-//           <Link to="/products" className="inline-block bg-gray-800 text-white px-6 py-2 rounded">
-//             See All Products
-//           </Link>
-//         </div>
-//       </section>
-//       {/* Popular Categories */}
-//       <section className="max-w-5xl mx-auto px-4 py-12">
-//         <h2 className="text-2xl font-bold mb-6">Popular Categories</h2>
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//           {categories.map((c, idx) => (
-//             <div key={idx} className="bg-white rounded-lg shadow hover:shadow-lg transition p-4 text-center">
-//               <img src={c.image} alt={c.name} className="w-full h-32 object-cover rounded mb-3" />
-//               <h3 className="font-semibold text-gray-800">{c.name}</h3>
-//               <button className="mt-3 bg-blue-600 text-white px-4 py-2 rounded">
-//                 Explore
-//               </button>
-//             </div>
-//           ))}
-//         </div>
-//       </section>
-//     </div>
-//   );
-// }
+// ================= CTA =================
+function CTA() {
+   
+  return (
+    <section className="relative overflow-hidden py-12 mt-20 px-4 bg-gray-900 md:px-8">
+            <div className="w-full h-full rounded-full bg-gradient-to-r from-[#58AEF1] to-pink-500 absolute -top-12 -right-14 blur-2xl opacity-10"></div>
+            <div className="max-w-xl mx-auto text-center relative">
+                <div className="py-4">
+                    <h3 className="text-3xl text-gray-200 font-semibold md:text-5xl">
+                        Хотите открыть бизнес в США с уверенностью?
+                    </h3>
+                    <h4 className="text-lg text-gray-200 md:text-xl mt-4">
+  Быстрое решение бюрократических задач — экономия времени, денег и нервов.
+</h4>
+                </div>
+                <div className="mt-5 items-center justify-center gap-3 sm:flex">
+                    <a 
+                        href="#leadform"
+                        className="block w-full mt-2 py-2.5 px-8 text-gray-700 bg-white rounded-md duration-150 hover:bg-gray-100 sm:w-auto"
+                    >
+                        Скачать PDF бесплатно
+                    </a>
+                    <a
+                        href="tel:+13468002250"
+                        className="block w-full mt-2 py-2.5 px-8 text-gray-300 bg-gray-700 rounded-md duration-150 hover:bg-gray-800 sm:w-auto"
+                    >
+                        Зарегистрироваться на вебинар
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+  );
+}
 
 // // ================= Products Page =================
 // function ProductsPage() {
@@ -314,6 +299,7 @@ export default function App() {
       <Header />
       <About />
       <Benefits />
+      <CTA />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
