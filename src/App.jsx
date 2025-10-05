@@ -3,6 +3,7 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 
 
 import logo from "./data/MATANATO_LOGO.PNG"
+import elmar from "./data/elmar.PNG"
 // import plum from "./assets/plum.jpg"
 // import bath from "./assets/bath.webp"
 // import electrical from "./assets/electrical.jpeg"
@@ -112,13 +113,17 @@ function Header() {
   );
 }
 
+// ================= About Section =================
+
+
 function About() {
+   
   return (
   <section className="py-14">
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-                    <div className="flex-1 sm:hidden lg:block">
-                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="md:max-w-lg sm:rounded-lg shadow-2xl" alt="Partners" />
+                    <div className="flex-1 sm:hidden lg:block p-4">
+                        <img src={elmar} className="md:max-w-lg rounded-lg shadow-2xl" alt="Partners" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
                         <h3 className="text-red-700 font-semibold">
@@ -153,30 +158,25 @@ function About() {
   );
 }
 
-// // ================= Hero Section =================
-// function Hero() {
-//   const topDeal = products.find(p => p.tracking === "TRK10000017"); // топ-продукт для акции
-
-//   return (
-//     <section id="hero" className="mt-20 bg-gradient-to-r from-blue-100 to-white py-16">
-//       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between px-4">
-//         <div className="mb-6 md:mb-0 md:w-1/2">
-//           <h1 className="text-4xl font-bold mb-4">Super Deal: {topDeal.name}</h1>
-//           <p className="text-gray-700 mb-6">{topDeal.description}</p>
-//           <Link
-//             to={`/product/${topDeal.tracking}`}
-//             className="bg-red-700 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-red-700 transition"
-//           >
-//             Buy Now - ${topDeal.price}
-//           </Link>
-//         </div>
-//         <div className="md:w-1/2">
-//           <img src={topDeal.image} alt={topDeal.name} className="rounded-lg shadow-lg w-full" />
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
+// ================= Benefits Section =================
+function Benefits() {
+  return (
+    <section className="bg-gray-50 py-10 px-4 md:px-10 rounded-2xl shadow-md max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Why Choose Matanato?</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        {benefits.map((item, index) => (
+          <div key={index} className="flex items-start space-x-4 p-4 bg-white rounded-xl shadow hover:shadow-md transition">
+            <div>{item.icon}</div>
+            <div>
+              <h4 className="font-semibold text-lg text-gray-800">{item.title}</h4>
+              <p className="text-gray-600 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
 
 // // ================= Home =================
 // function Home() {
