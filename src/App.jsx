@@ -200,7 +200,7 @@ function CTA() {
             <div className="w-full h-full rounded-full bg-gradient-to-r from-[#58AEF1] to-pink-500 absolute -top-12 -right-14 blur-2xl opacity-10"></div>
             <div className="max-w-xl mx-auto text-center relative">
                 <div className="py-4">
-                    <h3 className="text-3xl text-gray-200 font-semibold md:text-5xl">
+                    <h3 className="text-xl text-gray-200 font-semibold md:text-2xl">
                         Хотите открыть бизнес в США с уверенностью?
                     </h3>
                     <h4 className="text-sm text-gray-200 mt-4">
@@ -296,10 +296,10 @@ const plans = [
     ];
 
   return (
-        <section className='py-14'>
+        <section className='py-14 mt-14'>
             <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
                 <div className='relative max-w-xl mx-auto sm:text-center'>
-                    <h3 className='text-red-700 text-3xl font-extrabold sm:text-5xl'>
+                    <h3 className='text-red-700 text-4xl font-extrabold sm:text-5xl'>
                         Мой путь — ваша уверенность
                     </h3>
                     <div className='mt-3 max-w-xl'>
@@ -361,6 +361,68 @@ const plans = [
             </div>
         </section>
     );
+}
+
+// ================= QA Page =================
+
+function Questions() {
+
+    const faqsList = [
+        {
+            q: "Нужна ли мне виза или SSN, чтобы открыть LLC?",
+            a: "Нет. LLC может открыть нерезидент; для банковских операций иногда нужен визит в США, но есть работающие онлайн-варианты."
+        },
+        {
+            q: "Сколько времени занимает регистрация?",
+            a: "Сам процесс регистрации LLC — 1–5 рабочих дней (в зависимости от штата и сервиса), полная настройка (банк, EIN) — 2–6 недель."
+        },
+        {
+            q: "Какой штат лучше?",
+            a: "Для большинства — Wyoming/Delaware/Texas. Выбор зависит от целей: налоги, конфиденциальность, стоимость."
+        },
+        {
+            q: "Есть ли гарантия?",
+            a: "Я даю практическую поддержку и помогаю пройти процедуру. Финансовые гарантии — в оферте (описываем условия возврата)."
+        },
+        {
+            q: "Нужно ли находиться в США, чтобы открыть LLC?",
+            a: "Нет. Вы можете открыть компанию дистанционно, находясь в любой стране. Все документы оформляются онлайн, а банковский счёт и платёжные системы подключаются удалённо."
+        },
+        {
+            q: "Подойдёт ли этот курс, если я ничего не понимаю в бизнесе и налогах США?",
+            a: "Да, курс рассчитан именно на новичков.Материал объясняется простым языком, без юридических терминов. После прохождения вы будете понимать, какие шаги сделать, какие формы подать и как принимать платежи легально."
+        }
+    ]
+
+    return (
+        <div className="leading-relaxed mt-12 mx-4 md:mx-8">
+            <div className="text-center space-y-3">
+                <h1 className="block text-gray-800 text-4xl font-bold">
+                     Часто спрашивают
+                </h1>
+                <p className="text-gray-500 max-w-lg mx-auto">
+                    Собрал здесь всё, что вы обычно спрашиваете — коротко, ясно и по делу.
+                </p>
+            </div>
+            <div className="relative bg-white rounded-md mt-10 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl sm:mx-auto" style={{boxShadow: '0px 7px 20px 7px #F1F1F1'}}>
+                <div className="grid gap-4 py-8 md:grid-cols-2">
+                    {
+                        faqsList.map((item, idx) => (
+                            <div className="space-y-3 mt-6 px-8" key={idx}>
+                                <h4 className="text-red-700 text-xl font-bold ">
+                                    {item.q}
+                                </h4>
+                                <p className="text-gray-500">
+                                    {item.a}
+                                </p>
+                            </div>
+                        ))
+                    }
+                </div>
+                <span className="w-0.5 h-full bg-gray-200 m-auto absolute top-0 left-0 right-0 hidden md:block"></span>
+            </div>
+        </div>
+    )
 }
 
 // // ================= Products Page =================
@@ -437,6 +499,7 @@ export default function App() {
       <Benefits />
       <CTA />
       <Products />
+      <Questions />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
