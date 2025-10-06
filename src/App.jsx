@@ -233,41 +233,41 @@ function Products() {
 const plans = [
         {
             name: "PDF «7 шагов для открытия бизнеса в США»",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            desc: "Получает базовое понимание, избегает типичных ошибок, видит твою экспертность",
             price: 0,
             isMostPop: false,
             cta: "Скачать бесплатно",
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
+                "Открытие LLC",
+                "Штат регистрации",
+                "Получение EIN",
+                "Бансковский счёт",
+                "Платёжные системы",
+                "Правила и отчётность",
 
             ],
         },
         {
             name: "Курс «Как открыть LLC и начать принимать платежи»",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: 35,
+            desc: "Экономит недели поиска информации, получает готовый план действий, уверенность в правильных шагах",
+            price: 29,
+            old: "$150",
             isMostPop: true,
             cta: "Забронировать место",
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
+                "Пошаговая инструкция",
+                "Платёжные системы",
+                "Открытию счёта онлайн",
+                "Разбор типичных ошибок",
+                "Готовые шаблоны",
+                "План развития бизнеса",
             ],
         },
         {
             name: "Консультация 2 часа «Ваш бизнес-план в США»",
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: 60,
+            price: 99,
+            old: "$500",
             isMostPop: false,
             cta: "Заказать консультацию",
             features: [
@@ -284,7 +284,8 @@ const plans = [
         {
             name: "Пакет «Бизнес в США под ключ»",
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: 60,
+            price: 290,
+            old: "$1500",
             isMostPop: false,
             cta: "Получить пакет",
             features: [
@@ -318,27 +319,28 @@ const plans = [
                             <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""}`}>
                                 {
                                     item.isMostPop ? (
-                                        <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border shadow-md bg-white text-center text-gray-700 text-sm font-semibold">Most popular</span>
+                                        <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border shadow-md bg-red-700 text-center text-gray-100 text-sm font-semibold">Популярное</span>
                                     ) : ""
                                 }
-                                <div className="p-8 space-y-4 border-b">
+                                <div className="p-8 space-y-4 h-[300px]">
                                     <span className='text-red-700 font-semibold'>
                                         {item.name}
                                     </span>
                                     <div className='text-gray-800 text-3xl font-semibold'>
-                                        ${item.price}
+                                        ${item.price} <span className="line-through text-gray-600 text-[20px]"> {item.old}</span>
                                     </div>
                                     <p>
                                         {item.desc}
                                     </p>
-                                    <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-red-700 hover:bg-indigo-500 active:bg-indigo-700'>
+                                    
+                                    
+                                </div>
+                                <div className="p-4 border-b">
+                                        <button className='px-3 py-3 rounded-lg w-full font-semibold text-sm duration-150 text-white bg-red-700 hover:bg-red-500 active:bg-red-600'>
                                         {item.cta}
                                     </button>
-                                </div>
+                                    </div>
                                 <ul className='p-8 space-y-3'>
-                                    <li className="pb-2 text-gray-800 font-medium">
-                                        <p>Features</p>
-                                    </li>
                                     {
                                         item.features.map((featureItem, idx) => (
                                             <li key={idx} className='flex items-center gap-5'>
