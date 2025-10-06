@@ -203,7 +203,7 @@ function CTA() {
                     <h3 className="text-3xl text-gray-200 font-semibold md:text-5xl">
                         Хотите открыть бизнес в США с уверенностью?
                     </h3>
-                    <h4 className="text-lg text-gray-200 md:text-xl mt-4">
+                    <h4 className="text-sm text-gray-200 mt-4">
   Быстрое решение бюрократических задач — экономия времени, денег и нервов.
 </h4>
                 </div>
