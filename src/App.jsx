@@ -233,9 +233,10 @@ function Products() {
 const plans = [
         {
             name: "PDF «7 шагов для открытия бизнеса в США»",
-            desc: "Получает базовое понимание, избегает типичных ошибок, видит твою экспертность",
+            desc: "Получаете базовое понимание, избегаете типичные ошибки, видите мою экспертность",
             price: 0,
             isMostPop: false,
+            need: false,
             cta: "Скачать бесплатно",
             features: [
                 "Открытие LLC",
@@ -249,53 +250,47 @@ const plans = [
         },
         {
             name: "Курс «Как открыть LLC и начать принимать платежи»",
-            desc: "Экономит недели поиска информации, получает готовый план действий, уверенность в правильных шагах",
+            desc: "Экономите недели поиска информации, получаете готовый план действий, уверенность в правильных шагах",
             price: 29,
             old: "$150",
             isMostPop: true,
+            need: false,
             cta: "Забронировать место",
             features: [
                 "Пошаговая инструкция",
                 "Платёжные системы",
                 "Открытию счёта онлайн",
-                "Разбор типичных ошибок",
+                "Разбор ошибок",
                 "Готовые шаблоны",
                 "План развития бизнеса",
             ],
         },
         {
-            name: "Консультация 2 часа «Ваш бизнес-план в США»",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            price: 99,
+            name: "Консультация 1 час «Ваш бизнес-план в США»",
+            desc: "Минимум ошибок, экономия времени и денег, доступ к опыту и контактам, быстрый результат",
+            price: 60,
             old: "$500",
             isMostPop: false,
+            need: false,
             cta: "Заказать консультацию",
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
+                "Разбор ситуации",
+                "Индивидуальный план действий",
+                "Вопрос - Ответ",
             ],
         },
         ,
         {
             name: "Пакет «Бизнес в США под ключ»",
-            desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            desc: "Полное сопровождение от регистрации до первых шагов",
             price: 290,
             old: "$1500",
             isMostPop: false,
+            need: true,
             cta: "Получить пакет",
             features: [
-                "Curabitur faucibus",
-                "massa ut pretium maximus",
-                "Sed posuere nisi",
-                "Pellentesque eu nibh et neque",
-                "Suspendisse a leo",
-                "Praesent quis venenatis ipsum",
-                "Duis non diam vel tortor",
+                "Полное наставничество",
+                "Сопровождение 1–3 месяца",
             ],
         },
     ];
@@ -316,7 +311,7 @@ const plans = [
                 <div className='mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-4'>
                     {
                         plans.map((item, idx) => (
-                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""}`}>
+                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""} ${item.need ? "bg-red-50" : ""}`}>
                                 {
                                     item.isMostPop ? (
                                         <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border shadow-md bg-red-700 text-center text-gray-100 text-sm font-semibold">Популярное</span>
