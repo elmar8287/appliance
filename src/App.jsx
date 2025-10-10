@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Routes, Route, Link, useParams } from "react-router-dom";
 
 
@@ -425,26 +425,210 @@ function Questions() {
     )
 }
 
-// // ================= Products Page =================
-// function ProductsPage() {
-//   return (
-//     <div className="max-w-5xl mx-auto px-4 py-8 mt-10">
-//       <h2 className="text-2xl font-bold mb-6">All Products</h2>
-//       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-//         {products.map(p => (
-//           <div key={p.tracking} className="bg-white rounded-lg shadow p-4">
-//             <img src={p.image} alt={p.name} className="w-full h-40 object-cover rounded mb-3" />
-//             <h3 className="font-semibold">{p.name}</h3>
-//             <p className="text-gray-600">${p.price}</p>
-//             <Link to={`/product/${p.tracking}`} className="inline-block mt-3 bg-blue-600 text-white px-4 py-2 rounded">
-//               View Details
-//             </Link>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
+// ================= Lead Gen Form Page =================
+
+function LeadGen() {
+
+      const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_o919xac",
+        "template_4w7153l",
+        form.current,
+        "cfohW8SIbOB19a4xY"
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+        },
+        (error) => {
+          alert("Failed to send message.");
+          console.error(error.text);
+        }
+      );
+  };
+
+    return (
+        <section className="py-20 bg-white text-gray-900" id="leadform">
+  <div className="max-w-2xl mx-auto px-6">
+    <h2 className="text-4xl font-semibold text-center mb-8">
+      Получите бесплатный PDF «7 шагов»
+    </h2>
+    <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-lg">
+      <input
+        name="company"
+        placeholder="Company Name"
+        required
+        className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+      <input
+        name="name"
+        placeholder="Your Name"
+        required
+        className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+      <input
+        name="phone"
+        placeholder="Phone"
+        className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+      <input
+        name="email"
+        placeholder="Email"
+        required
+        type="email"
+        className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+      <input
+        name="units"
+        placeholder="How many homes/units you manage?"
+        className="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none"
+      />
+
+      <div>
+        <label className="block font-medium mb-2">What services are you interested in?</label>
+        <div className="grid grid-cols-2 gap-2">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="services" value="Appliance" className="accent-blue-600" />
+            Appliance
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="services" value="Plumbing" className="accent-blue-600" />
+            Plumbing
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="services" value="Electrical" className="accent-blue-600" />
+            Electrical
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="services" value="HVAC" className="accent-blue-600" />
+            HVAC
+          </label>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+    );
+}
+
+//     <!-- Блок: Почему открыть компанию в США (HTML + Tailwind) -->
+function Why() {
+  return (
+    <section class="max-w-7xl mx-auto px-6 py-16 bg-white" id="why-us-llc">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Почему открыть компанию в США — это решение, которое меняет всё</h2>
+    <p class="mt-4 text-lg text-gray-600">Американская юрлицо — это не просто статус. Это доверие, доступ к международным платёжным системам и реальная возможность масштабировать бизнес по всему миру.</p>
+    <div class="mt-6">
+      <a href="#products" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg shadow">Узнать, как начать</a>
+    </div>
+  </div>
+
+  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+        <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+      
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4zM20 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Доверие и престиж</h3>
+      <p class="mt-2 text-sm text-gray-600">Американская регистрация повышает доверие у клиентов, партнёров и платёжных платформ.</p>
+    </div>
+
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v2h6v-2c0-1.657-1.343-3-3-3zM6 12v6h12v-6" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Приём платежей со всего мира</h3>
+      <p class="mt-2 text-sm text-gray-600">Подключение Stripe, PayPal и других систем — принимать деньги в долларах стало проще.</p>
+    </div>
+
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M8 7V5a4 4 0 118 0v2" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Работа с мировыми площадками</h3>
+      <p class="mt-2 text-sm text-gray-600">Amazon, Shopify, Etsy и другие платформы дают больше возможностей владельцам US-LLC.</p>
+    </div>
+
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+     
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 10v4m9-9h-4M7 12H3m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464L3.636 3.636" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Быстрая дистанционная регистрация</h3>
+      <p class="mt-2 text-sm text-gray-600">Всё можно оформить онлайн: LLC, EIN и другие процедуры занимают дни, а не месяцы.</p>
+    </div>
+
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v4h6v-4c0-1.657-1.343-3-3-3zM8 20h8" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Оптимизация налогов</h3>
+      <p class="mt-2 text-sm text-gray-600">Правильно выбранная структура и сопровождение помогают платить меньше в рамках закона.</p>
+    </div>
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+     
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v6h6v-6c0-1.657-1.343-3-3-3zM5 20h14" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Доступ к инвестициям</h3>
+      <p class="mt-2 text-sm text-gray-600">Американский статус облегчает общение с инвесторами и участие в программах финансирования.</p>
+    </div>
+
+    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
+    
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6h18M6 6v12a2 2 0 002 2h8a2 2 0 002-2V6" />
+        </svg>
+      </div>
+      <h3 class="mt-4 text-lg font-semibold">Развитие без границ</h3>
+      <p class="mt-2 text-sm text-gray-600">Принимайте платежи в долларах, нанимайте удалённую команду и расширяйте продажи по всему миру.</p>
+    </div>
+  </div>
+
+  <div class="mt-12 max-w-3xl mx-auto text-center">
+    <p class="text-gray-700">Готов получить американскую компанию без лишней бюрократии? Я помогу: от регистрации до подключения платёжных систем.</p>
+    <div class="mt-6 flex items-center justify-center gap-4">
+      <a href="#signup" class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-lg shadow">Записаться на консультацию</a>
+      <a href="#course" class="inline-block border border-gray-200 text-gray-700 px-5 py-3 rounded-lg">Курс: открыть LLC и принимать платежи — $29</a>
+    </div>
+  </div>
+</section>
+
+  );
+}
 
 // // ================= Product Page =================
 // function ProductPage() {
@@ -498,8 +682,10 @@ export default function App() {
       <About />
       <Benefits />
       <CTA />
+      <Why />
       <Products />
       <Questions />
+      <LeadGen />
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
