@@ -531,7 +531,7 @@ function Why() {
     <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Почему открыть компанию в США — это решение, которое меняет всё</h2>
     <p class="mt-4 text-lg text-gray-600">Американская юрлицо — это не просто статус. Это доверие, доступ к международным платёжным системам и реальная возможность масштабировать бизнес по всему миру.</p>
     <div class="mt-6">
-      <a href="#products" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-6 py-3 rounded-lg shadow">Узнать, как начать</a>
+      <a href="#products" class="inline-block bg-red-700 hover:bg-red-800 text-white font-medium px-6 py-3 rounded-lg shadow">Узнать, как начать</a>
     </div>
   </div>
 
@@ -539,7 +539,7 @@ function Why() {
         <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
       
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4zM20 11c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4z" />
         </svg>
       </div>
@@ -551,7 +551,7 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
 
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v2h6v-2c0-1.657-1.343-3-3-3zM6 12v6h12v-6" />
         </svg>
       </div>
@@ -563,7 +563,7 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
         
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 7h18M5 7v12a2 2 0 002 2h10a2 2 0 002-2V7M8 7V5a4 4 0 118 0v2" />
         </svg>
       </div>
@@ -575,7 +575,7 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
      
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 3v4m0 10v4m9-9h-4M7 12H3m15.364-6.364l-2.828 2.828M6.464 17.536l-2.828 2.828M17.536 17.536l2.828 2.828M6.464 6.464L3.636 3.636" />
         </svg>
       </div>
@@ -587,7 +587,7 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
         
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v4h6v-4c0-1.657-1.343-3-3-3zM8 20h8" />
         </svg>
       </div>
@@ -598,7 +598,7 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
      
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 1.343-3 3v6h6v-6c0-1.657-1.343-3-3-3zM5 20h14" />
         </svg>
       </div>
@@ -609,20 +609,12 @@ function Why() {
     <div class="p-6 border rounded-xl shadow-sm flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
     
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6h18M6 6v12a2 2 0 002 2h8a2 2 0 002-2V6" />
         </svg>
       </div>
       <h3 class="mt-4 text-lg font-semibold">Развитие без границ</h3>
       <p class="mt-2 text-sm text-gray-600">Принимайте платежи в долларах, нанимайте удалённую команду и расширяйте продажи по всему миру.</p>
-    </div>
-  </div>
-
-  <div class="mt-12 max-w-3xl mx-auto text-center">
-    <p class="text-gray-700">Готов получить американскую компанию без лишней бюрократии? Я помогу: от регистрации до подключения платёжных систем.</p>
-    <div class="mt-6 flex items-center justify-center gap-4">
-      <a href="#signup" class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium px-6 py-3 rounded-lg shadow">Записаться на консультацию</a>
-      <a href="#course" class="inline-block border border-gray-200 text-gray-700 px-5 py-3 rounded-lg">Курс: открыть LLC и принимать платежи — $29</a>
     </div>
   </div>
 </section>
@@ -681,11 +673,11 @@ export default function App() {
       <Header />
       <About />
       <Benefits />
-      <CTA />
       <Why />
       <Products />
       <Questions />
-      <LeadGen />
+      <CTA />
+      {/* <LeadGen /> */}
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
