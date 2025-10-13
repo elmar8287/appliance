@@ -4,6 +4,8 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 
 import logo from "./data/MATANATO_LOGO.PNG"
 import elmar from "./data/elmar.PNG"
+import business from "./data/business-usa.jpg"
+import businessusa from "./data/usa-business.jpg"
 
 import { BsFiletypeDoc, BsBank2, BsCurrencyDollar, BsPercent, BsFillPatchQuestionFill, BsClockHistory } from "react-icons/bs";
 
@@ -99,15 +101,15 @@ function Header() {
                     </div>
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
                         <img
-                            src="https://images.unsplash.com/photo-1573164713619-24c711fe7878?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1738&q=80"
+                            src={business}
                             className=" md:rounded-tl-[108px]"
-                            alt="B2B"
+                            alt="business-usa"
                         />
                     </div>
                 </div>
                 <div className="mt-14 px-4 md:px-8">
                     <p className="text-center text-sm text-gray-700 font-semibold">
-                      Полный пошаговый план: PDF-чеклист → вебинар → сопровождение под ключ.
+                      Полный пошаговый план: PDF-чеклист → курс → сопровождение под ключ.
                     </p>
                     
                 </div>
@@ -526,17 +528,36 @@ function LeadGen() {
 //     <!-- Блок: Почему открыть компанию в США (HTML + Tailwind) -->
 function Why() {
   return (
-    <section class="max-w-7xl mx-auto px-6 py-16 bg-white" id="why-us-llc">
-  <div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl sm:text-4xl font-extrabold leading-tight">Почему открыть компанию в США — это решение, которое меняет всё</h2>
-    <p class="mt-4 text-lg text-gray-600">Американская юрлицо — это не просто статус. Это доверие, доступ к международным платёжным системам и реальная возможность масштабировать бизнес по всему миру.</p>
-    <div class="mt-6">
-      <a href="#products" class="inline-block bg-red-700 hover:bg-red-800 text-white font-medium px-6 py-3 rounded-lg shadow">Узнать, как начать</a>
-    </div>
-  </div>
+    <section class="relative py-20 px-6 bg-gray-50 overflow-hidden" id="why-us-llc">
+      <div className="absolute inset-0">
+        <img
+          src={businessusa}
+          alt="USA Business Background"
+          className="absolute inset-0 w-full h-full object-cover opacity-80"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 to-white/90 backdrop-blur-sm"></div>
+      </div>
 
-  <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-        <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+      <div className="relative max-w-3xl mx-auto text-center">
+        <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
+          Почему открыть компанию в США — это решение, которое меняет всё
+        </h2>
+        <p className="mt-4 text-lg text-gray-600">
+          Американская юрлицо — это не просто статус. Это доверие, доступ к международным платёжным системам
+          и реальная возможность масштабировать бизнес по всему миру.
+        </p>
+        <div className="mt-6">
+          <a
+            href="#products"
+            className="inline-block bg-red-700 hover:bg-red-800 text-white font-medium px-6 py-3 rounded-lg shadow"
+          >
+            Узнать, как начать
+          </a>
+        </div>
+      </div>
+
+      <div class="relative mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+        <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
       
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -548,7 +569,7 @@ function Why() {
     </div>
 
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
 
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -560,7 +581,7 @@ function Why() {
     </div>
 
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
         
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -572,7 +593,7 @@ function Why() {
     </div>
 
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
      
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -584,7 +605,7 @@ function Why() {
     </div>
 
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
         
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -595,7 +616,7 @@ function Why() {
       <p class="mt-2 text-sm text-gray-600">Правильно выбранная структура и сопровождение помогают платить меньше в рамках закона.</p>
     </div>
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
      
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -606,7 +627,7 @@ function Why() {
       <p class="mt-2 text-sm text-gray-600">Американский статус облегчает общение с инвесторами и участие в программах финансирования.</p>
     </div>
 
-    <div class="p-6 border rounded-xl shadow-sm flex flex-col">
+    <div class="p-6 border rounded-xl shadow-xl flex flex-col">
       <div class="flex items-center justify-center w-12 h-12 bg-indigo-50 rounded-full">
     
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
