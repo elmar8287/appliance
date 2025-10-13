@@ -313,7 +313,7 @@ const plans = [
                 <div className='mt-16 justify-center gap-6 sm:grid sm:grid-cols-2 sm:space-y-0 lg:grid-cols-4'>
                     {
                         plans.map((item, idx) => (
-                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl border-2 mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""} ${item.need ? "bg-red-50" : ""}`}>
+                            <div key={idx} className={`relative flex-1 flex items-stretch flex-col rounded-xl shadow-2xl mt-6 sm:mt-0 ${item.isMostPop ? "mt-10" : ""} ${item.need ? "bg-red-50" : ""}`}>
                                 {
                                     item.isMostPop ? (
                                         <span class="w-32 absolute -top-5 left-0 right-0 mx-auto px-3 py-2 rounded-full border shadow-md bg-red-700 text-center text-gray-100 text-sm font-semibold">Популярное</span>
