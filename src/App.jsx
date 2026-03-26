@@ -3,8 +3,8 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 
 
 import logo from "./data/MATANATO_LOGO.PNG"
-import elmar from "./data/elmar.PNG"
-import business from "./data/payment ways.png"
+import instants from "./data/klarna.webp"
+import business from "./data/payment_ways.webp"
 import businessusa from "./data/usa-business.jpg"
 
 import { BsFiletypeDoc, BsBank2, BsCurrencyDollar, BsPercent, BsFillPatchQuestionFill, BsClockHistory } from "react-icons/bs";
@@ -122,33 +122,31 @@ function About() {
   <section className="py-14">
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
-                    <div className="flex-1 sm:hidden lg:block p-4">
-                        <img src={elmar} className="md:max-w-lg rounded-lg shadow-2xl" alt="Partners" />
+                    <div className="sm:hidden lg:block p-4">
+                        <img src={instants} className="md:max-w-lg rounded-lg shadow-xl" alt="Partners" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
                         <h3 className="text-red-700 font-semibold">
-                            Oт предпринимателя, который сделал это сам.
+                            Flexible payment options available
                         </h3>
                         <p className="text-gray-800 text-3xl font-extrabold sm:text-4xl">
-                            Кто проводит курс
+                            Fix It Today — Pay Over Time
                         </p>
-                        <p className="mt-3 text-gray-600">
-                            Меня зовут Эльмар Абдулкеримов. Более 3 лет я веду бизнес в США:
+                        <p className="mt-3">
+                            Don’t delay your repair because of cost.
+Split your payment into smaller, manageable amounts:
                             
-                            <ul className="list-disc p-6">
-                                <li>Регистрировал LLC</li>
-                                <li>Получал налоговые номера</li>
-                                <li>Открывал банковские счета</li>
-                                <li>Подключал платёжные системы и тд.</li>
-                            </ul>
-                            Сейчас через Matanato LLC помогаю русскоязычным предпринимателям избежать ошибок и запустить бизнес правильно.
-                            
+                                                       
                             </p>
-                            <div className="p-4 bg-gray-200 rounded-xl">
-                            <h4 className="font-bold text-2xl mb-2">Записаться на консультацию</h4>
-                            <p>Я создал этот курс, чтобы сэкономить ваше время, уберечь от лишних расходов и распространённых ошибок, с которыми сталкиваются большинство начинающих владельцев компаний в США.</p>
+                            <div className="p-4 bg-gray-200 rounded-xl shadow-xl">
+                            <h4 className="font-bold text-2xl mb-2">As low as $25/month for eligible customers</h4>
+                             <ul className="list-none p-6">
+                                <li>✔ Pay in 4 easy installments</li>
+                                <li>✔ Quick approval</li>
+                                <li>✔ No large upfront payment</li>
+                            </ul>
                         <a href="#leadform" className="mt-4 block py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
-                                Записаться на курс
+                                Check Payment Options
                             </a>
                         </div>
                     </div>
