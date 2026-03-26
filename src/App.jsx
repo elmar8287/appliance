@@ -4,7 +4,7 @@ import { Routes, Route, Link, useParams } from "react-router-dom";
 
 import logo from "./data/MATANATO_LOGO.PNG"
 import elmar from "./data/elmar.PNG"
-import business from "./data/business-usa.jpg"
+import business from "./data/payment ways.png"
 import businessusa from "./data/usa-business.jpg"
 
 import { BsFiletypeDoc, BsBank2, BsCurrencyDollar, BsPercent, BsFillPatchQuestionFill, BsClockHistory } from "react-icons/bs";
@@ -79,23 +79,17 @@ function Header() {
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-sm text-red-700 font-medium">
-                            правильно и без посредников
+                            Call Now (346)800-2250
                         </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
-                            Откройте бизнес в США — <span className="text-red-700" >быстро, правильно, без посредников</span>
+                            Appliance Broken? — <span className="text-red-700" >We Fix It Today.</span>
                         </h2>
                         <p>
-                            Получите бесплатный PDF-чеклист <span className="font-bold" >«7 шагов для открытия компании в США»</span> и узнайте, как избежать типичных ошибок.
+                            Fast, affordable repair for  <span className="font-bold" >refrigerators, washers, dryers, ovens & more. </span> Same-day service available.
                         </p>
                         <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
                             <a href="#leadform" className="block py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
-                                Скачать PDF бесплатно
-                            </a>
-                            <a href="/" className="flex items-center justify-center gap-x-2 py-2 px-4 text-gray-700 hover:text-gray-500 font-medium duration-150 active:bg-gray-100 border rounded-lg md:inline-flex">
-                                Забронировать место
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                                    <path fillRule="evenodd" d="M2 10a.75.75 0 01.75-.75h12.59l-2.1-1.95a.75.75 0 111.02-1.1l3.5 3.25a.75.75 0 010 1.1l-3.5 3.25a.75.75 0 11-1.02-1.1l2.1-1.95H2.75A.75.75 0 012 10z" clipRule="evenodd" />
-                                </svg>
+                                Book Repair Now
                             </a>
                         </div>
                     </div>
@@ -109,7 +103,7 @@ function Header() {
                 </div>
                 <div className="mt-14 px-4 md:px-8">
                     <p className="text-center text-sm text-gray-700 font-semibold">
-                      Полный пошаговый план: PDF-чеклист → курс → сопровождение под ключ.
+                      | Same-Day Service | No Fix – No Pay | Pay in Installments |
                     </p>
                     
                 </div>
@@ -117,6 +111,7 @@ function Header() {
         </>
   );
 }
+
 
 // ================= About Section =================
 
@@ -458,9 +453,9 @@ function LeadGen() {
         <section className="py-20 bg-white text-gray-900" id="leadform">
   <div className="max-w-2xl mx-auto px-6">
     <h2 className="text-4xl font-semibold text-center mb-8">
-      Получите бесплатный PDF «7 шагов»
+      Book your appointment in <span className="text-red-700 font-semibold">30 seconds</span>
     </h2>
-    <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-lg">
+    <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-2xl">
       <input
         name="company"
         placeholder="Company Name"
@@ -515,7 +510,7 @@ function LeadGen() {
 
       <button
         type="submit"
-        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
+        className="w-full py-3 bg-red-700 text-white font-semibold rounded-lg hover:bg-red-500 transition"
       >
         Submit
       </button>
@@ -692,13 +687,14 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
+      <LeadGen />
       <About />
       <Benefits />
       <Why />
       <Products />
       <Questions />
       <CTA />
-      {/* <LeadGen /> */}
+      
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />
