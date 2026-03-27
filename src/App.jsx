@@ -240,7 +240,7 @@ function LeadGen() {
     return (
         <section className="py-6 bg-white text-gray-900" id="leadform">
   <div className="max-w-2xl mx-auto px-6">
-    <h2 className="text-4xl font-semibold text-center mb-8">
+    <h2 className="text-4xl font-normal text-center mb-8">
       Book your appointment in <span className="text-red-700 font-semibold">30 seconds</span>
     </h2>
     <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-2xl">
@@ -306,7 +306,6 @@ export default function App() {
       <About />
       <WhyWe />
       <CTA />
-      
       {/* <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<ProductsPage />} />

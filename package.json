@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "emailjs": "^5.0.0",
     "emailjs-com": "^3.2.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
