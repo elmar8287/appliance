@@ -102,7 +102,7 @@ function About() {
             <div className="max-w-screen-xl mx-auto md:px-8">
                 <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
                     <div className="sm:hidden lg:block p-4">
-                        <img src={instants} className="md:max-w-lg rounded-lg shadow-xl" alt="Partners" />
+                        <img src={instants} width="640" height="360" className="rounded-lg shadow-xl" alt="Partners" />
                     </div>
                     <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
                         <h3 className="text-red-700 font-semibold">
