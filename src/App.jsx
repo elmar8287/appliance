@@ -73,13 +73,12 @@ function Header() {
                             Fast, affordable repair for  <span className="font-bold" >refrigerators, washers, dryers, ovens & more. </span> Same-day service available.
                         </p>
                         <div className="items-center gap-x-3 space-y-2 sm:flex sm:space-y-0">
-                            <a href="tel:+13468002250" className="py-5 px-5 rounded-lg font-medium text-2xl text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
+                            <a href="tel:+13468002250" className="py-4 px-5 rounded-lg font-medium text-2xl text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
                             CALL NOW!
                         </a>
-                        <p className="md:hidden">or book an appointment</p>
                         </div>
                     </div>
-                    <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
+                    <div className="flex-none mt-2 md:mt-0 md:max-w-xl">
                         <img
                             src={business}
                             className="hidden md:block md:rounded-tl-[108px]"
@@ -241,7 +240,7 @@ function LeadGen() {
     return (
         <section className="py-6 bg-white text-gray-900" id="leadform">
   <div className="max-w-2xl mx-auto px-6">
-    <h2 className="text-4xl font-semibold text-center mb-8 hidden md:block">
+    <h2 className="text-4xl font-semibold text-center mb-8">
       Book your appointment in <span className="text-red-700 font-semibold">30 seconds</span>
     </h2>
     <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-2xl">
