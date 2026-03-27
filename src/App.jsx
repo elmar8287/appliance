@@ -245,16 +245,17 @@ const LeadGen = memo(() => (
   <section id="leadform" className="py-6 mx-2 border rounded-xl shadow-2xl px-2">
     <h2 className="text-3xl text-center mb-6">Book in 30 seconds</h2>
     <form
-      action="https://formsubmit.co/matanatollc@gmail.com"
+      action="https://formsubmit.co/9ea20dd43ccb96c2127e1c12150aeeda"
       method="POST"
       className="max-w-xl mx-auto space-y-4"
     >
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://appliance.matanato.com/thank-you" />
+      <input type="hidden" name="_subject" value="New submission!" />
 
-      <input name="name" placeholder="Name" required className="w-full p-3 border rounded" />
-      <input name="phone" placeholder="Phone" required className="w-full p-3 border rounded" />
-      <textarea name="issue" placeholder="Issue" required className="w-full p-3 border rounded" />
+      <input type="name" name="name" placeholder="Name" required className="w-full p-3 border rounded" />
+      <input type="phone" name="phone" placeholder="Phone" required className="w-full p-3 border rounded" />
+      <textarea type="textarea" name="issue" placeholder="Issue" required className="w-full p-3 border rounded" />
 
       <label>
         <input type="checkbox" name="installments" /> Pay in installments
