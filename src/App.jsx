@@ -56,8 +56,8 @@ function Header() {
                             ))
                         }
                     </div>
-                    <li className="order-2 py-5 md:py-0">
-                        <a href="tel:+13468002250" className="py-2 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:hidden">
+                    <li className="order-2 py-8 md:py-0">
+                        <a href="tel:+13468002250" className="py-8 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:hidden">
                             CALL NOW!
                         </a>
                     </li>
@@ -73,10 +73,10 @@ function Header() {
                             Fast, affordable repair for  <span className="font-bold" >refrigerators, washers, dryers, ovens & more. </span> Same-day service available.
                         </p>
                         <div className="items-center gap-x-3 space-y-2 sm:flex sm:space-y-0">
-                            <a href="tel:+13468002250" className="py-2 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
+                            <a href="tel:+13468002250" className="py-5 px-5 rounded-lg font-medium text-2xl text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
                             CALL NOW!
                         </a>
-                        <p>or book an appointment</p>
+                        <p className="md:hidden">or book an appointment</p>
                         </div>
                     </div>
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
