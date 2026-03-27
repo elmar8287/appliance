@@ -6,7 +6,7 @@ import instants from "./data/klarna.webp";
 import business from "./data/payment_ways.webp";
 
 // ================= Pixel =================
-function Pixel() {
+function Pixel({ service }) {
   useEffect(() => {
     if (!window.fbq) {
       !(function (f, b, e, v, n, t, s) {
@@ -27,9 +27,22 @@ function Pixel() {
       })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
       fbq("init", "YOUR_PIXEL_ID"); // <- вставь свой Pixel ID
-      fbq("track", "PageView");
+      fbq("track", "PageView", { service });
+    } else {
+      fbq("track", "PageView", { service });
     }
-  }, []);
+  }, [service]);
+
+  // Можно создать функцию для отслеживания Lead
+  const trackLead = () => {
+    if (window.fbq) {
+      fbq("track", "Lead", { service });
+    }
+  };
+
+  // Экспорт функции, если понадобится вызывать вручную
+  window.trackLead = trackLead;
+
   return null;
 }
 
@@ -258,6 +271,9 @@ const LeadGen = memo(() => (
       action="https://formsubmit.co/9ea20dd43ccb96c2127e1c12150aeeda"
       method="POST"
       className="max-w-xl mx-auto space-y-4"
+      onSubmit={() => {
+      if (window.trackLead) window.trackLead();
+      }}
     >
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://appliance.matanato.com/thank-you" />
@@ -303,7 +319,7 @@ function ThankYou() {
 export default function App() {
   return (
     <>
-      <Pixel />
+      <Pixel service="Appliance"/>
       <Routes>
         <Route
           path="/"
