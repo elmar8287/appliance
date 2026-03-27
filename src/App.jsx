@@ -57,7 +57,7 @@ function Header() {
                         }
                     </div>
                     <li className="order-2 py-5 md:py-0">
-                        <a href="tel:+13468002250" className="py-2 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
+                        <a href="tel:+13468002250" className="py-2 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:hidden">
                             CALL NOW!
                         </a>
                     </li>
@@ -66,19 +66,17 @@ function Header() {
             <header className="py-4">
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
-                        <h1 className="text-sm text-red-700 font-medium">
-                            Call Now (346)800-2250
-                        </h1>
                         <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
                             Appliance Broken? — <span className="text-red-700" >We Fix It Today.</span>
                         </h2>
                         <p>
                             Fast, affordable repair for  <span className="font-bold" >refrigerators, washers, dryers, ovens & more. </span> Same-day service available.
                         </p>
-                        <div className="items-center gap-x-3 space-y-2 sm:flex sm:space-y-0 hidden md:block">
-                            <a href="#leadform" className=" py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
-                                Book Repair Now
-                            </a>
+                        <div className="items-center gap-x-3 space-y-2 sm:flex sm:space-y-0">
+                            <a href="tel:+13468002250" className="py-2 px-5 rounded-lg font-medium text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline">
+                            CALL NOW!
+                        </a>
+                        <p>or book an appointment</p>
                         </div>
                     </div>
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
@@ -290,7 +288,7 @@ function LeadGen() {
         type="submit"
         className="w-full py-3 bg-red-700 text-white font-semibold rounded-lg hover:bg-red-500 transition"
       >
-        Submit
+        Book Now!
       </button>
     </form>
   </div>
