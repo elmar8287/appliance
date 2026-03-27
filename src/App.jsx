@@ -44,7 +44,7 @@ function Header() {
 
   return (
     <>
-      <nav className="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
+      <nav role="navigation" className="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 md:flex md:space-x-6">
         <div className="flex justify-between">
           <a href="/">
             <img
@@ -57,6 +57,7 @@ function Header() {
             />
           </a>
           <button
+            aria-label="Menu"
             className="text-gray-500 outline-none md:hidden"
             onClick={() => setState(!state)}
           >
@@ -103,10 +104,11 @@ function Header() {
               CALL NOW!
             </a>
           </li>
+          
         </ul>
       </nav>
 
-      <header className="py-4">
+      <header role="banner" className="py-4">
         <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
           <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
             <h2 className="text-4xl text-gray-800 font-extrabold md:text-5xl">
@@ -121,7 +123,15 @@ function Header() {
                 href="tel:+13468002250"
                 className="py-4 px-5 rounded-lg font-medium text-2xl text-white text-center bg-red-700 hover:bg-red-500 active:bg-red-700 duration-150 block md:py-3 md:inline"
               >
-                CALL NOW!
+                Call Now!
+              </a>
+              <a
+                href="https://wa.me/13468002250"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-4 px-5 rounded-lg font-medium text-2xl text-white text-center bg-green-500 hover:bg-green-400 active:bg-green-700 duration-150 block md:py-3 md:inline"
+              >
+                Message on WhatsApp
               </a>
             </div>
           </div>
@@ -255,6 +265,7 @@ const LeadGen = memo(() => (
 
       <input type="name" name="name" placeholder="Name" required className="w-full p-3 border rounded" />
       <input type="phone" name="phone" placeholder="Phone" required className="w-full p-3 border rounded" />
+      <input type="text" name="zip" placeholder="ZIP code" required className="w-full p-3 border rounded" />
       <textarea type="textarea" name="issue" placeholder="Issue" required className="w-full p-3 border rounded" />
 
       <label>
@@ -276,7 +287,7 @@ function ThankYou() {
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-4">
       <h1 className="text-4xl font-extrabold text-gray-800 mb-4">Thank you!</h1>
       <p className="text-lg text-gray-600 mb-6 text-center">
-        Your request has been received. Our technician will contact you shortly.
+        Your request has been received. Our technician will contact you shortly (usually in 5-10 min)
       </p>
       <a
         href="/"
