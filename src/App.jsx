@@ -75,7 +75,7 @@ function Header() {
                     </li>
                 </ul>
             </nav>
-            <header className="py-20">
+            <header className="py-4">
                 <div className="max-w-screen-xl mx-auto text-gray-600 gap-x-12 items-center justify-between overflow-hidden md:flex md:px-8">
                     <div className="flex-none space-y-5 px-4 sm:max-w-lg md:px-0 lg:max-w-xl">
                         <h1 className="text-sm text-red-700 font-medium">
@@ -87,8 +87,8 @@ function Header() {
                         <p>
                             Fast, affordable repair for  <span className="font-bold" >refrigerators, washers, dryers, ovens & more. </span> Same-day service available.
                         </p>
-                        <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0">
-                            <a href="#leadform" className="block py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
+                        <div className="items-center gap-x-3 space-y-3 sm:flex sm:space-y-0 hidden md:block">
+                            <a href="#leadform" className=" py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
                                 Book Repair Now
                             </a>
                         </div>
@@ -96,16 +96,10 @@ function Header() {
                     <div className="flex-none mt-14 md:mt-0 md:max-w-xl">
                         <img
                             src={business}
-                            className=" md:rounded-tl-[108px]"
+                            className="hidden md:block md:rounded-tl-[108px]"
                             alt="business-usa"
                         />
                     </div>
-                </div>
-                <div className="mt-14 px-4 md:px-8">
-                    <p className="text-center text-sm text-gray-700 font-semibold">
-                      | Same-Day Service | No Fix – No Pay | Pay in Installments |
-                    </p>
-                    
                 </div>
             </header>
         </>
@@ -160,17 +154,11 @@ Split your payment into smaller, manageable amounts:
 
 function Benefits() {
   return (
-    <section className="bg-gray-50 py-10 px-4 md:px-10 rounded-2xl shadow-md max-w-6xl mx-auto my-12">
+    <section className="py-10 px-4 md:px-10 rounded-2xl shadow-md max-w-6xl mx-auto my-12">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">Don’t Let a Small Problem Turn Into a Big Expense</h2>
  <p className="text-xl font-semibold text-center text-gray-800 mb-10">A leaking washer or a warm fridge won’t fix itself.
 Waiting only makes repairs more expensive.</p>
-<p className="text-xl font-semibold text-center text-gray-800 mb-10">Fix it now — before it gets worse.</p>
-      
-                            <a href="#leadform" className=" py-2 px-4 text-center text-white font-medium bg-red-700 duration-150 hover:bg-red-500 active:bg-red-700 rounded-lg shadow-lg hover:shadow-none">
-                                Book Repair Now
-                            </a>
-                      
-         
+<p className="text-3xl font-bold text-center text-red-700 mb-10">Fix it now — before it gets worse.</p>
     </section>
   );
 }
@@ -238,9 +226,9 @@ function LeadGen() {
   };
 
     return (
-        <section className="py-20 bg-white text-gray-900" id="leadform">
+        <section className="py-6 bg-white text-gray-900" id="leadform">
   <div className="max-w-2xl mx-auto px-6">
-    <h2 className="text-4xl font-semibold text-center mb-8">
+    <h2 className="text-4xl font-semibold text-center mb-8 hidden md:block">
       Book your appointment in <span className="text-red-700 font-semibold">30 seconds</span>
     </h2>
     <form ref={form} onSubmit={sendEmail} className="space-y-5 bg-white p-8 rounded-xl shadow-2xl">
@@ -315,8 +303,9 @@ export default function App() {
     <div className="min-h-screen bg-gray-50">
       <Header />
       <LeadGen />
-      <About />
       <Benefits />
+      <About />
+      
       <CTA />
       
       {/* <Routes>
