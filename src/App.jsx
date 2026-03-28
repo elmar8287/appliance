@@ -277,7 +277,7 @@ const LeadGen = memo(() => (
     >
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_next" value="https://appliance.matanato.com/thank-you" />
-      <input type="hidden" name="_subject" value="New submission!" />
+      <input type="hidden" name="_subject" value="New lead - Appliance Repair!" />
 
       <input type="name" name="name" placeholder="Name" required className="w-full p-3 border rounded" />
       <input type="phone" name="phone" placeholder="Phone" required className="w-full p-3 border rounded" />
