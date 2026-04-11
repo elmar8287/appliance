@@ -53,6 +53,7 @@ function Header() {
     { title: "Book now", path: "#leadform" },
     { title: "Pay in Installments", path: "#leadform" },
     { title: "Why we?", path: "#whywe" },
+    { title: "Privacy Policy", path: "/privacy" },
   ];
 
   return (
@@ -315,6 +316,132 @@ function ThankYou() {
   );
 }
 
+// ================= Privacy Policy Page =================
+function Privacy() {
+
+  return (
+    <div className="bg-gray-50 text-gray-800 min-h-screen">
+      <div className="max-w-4xl mx-auto px-6 py-12">
+
+        {/* Header */}
+        <div className="mb-10">
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+            Privacy Policy
+          </h1>
+          <p className="text-sm text-gray-500">
+            Effective Date: April 2026
+          </p>
+          <a href="/" className="m-2 text-semibold text-red-600">- back to main page</a>
+        </div>
+
+        {/* Content */}
+        <div className="space-y-8">
+
+          {/* Section 1 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              1. Information We Collect
+            </h2>
+            <p className="text-gray-600 mb-3">
+              We may collect the following personal information:
+            </p>
+            <ul className="list-disc pl-6 text-gray-600 space-y-1">
+              <li>Full name</li>
+              <li>Phone number</li>
+              <li>Address or ZIP code</li>
+              <li>Details about your service request</li>
+            </ul>
+          </section>
+
+          {/* Section 2 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              2. How We Use Your Information
+            </h2>
+            <p className="text-gray-600 mb-3">
+              We use the information we collect to:
+            </p>
+            <ul className="list-disc pl-6 text-gray-600 space-y-1">
+              <li>Contact you regarding your service request</li>
+              <li>Provide quotes and service details</li>
+              <li>Schedule appointments with technicians</li>
+              <li>Improve our services and customer experience</li>
+            </ul>
+          </section>
+
+          {/* Section 3 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              3. Sharing of Information
+            </h2>
+            <p className="text-gray-600">
+              We do not sell, rent, or trade your personal information. Your
+              information may only be shared with trusted service professionals
+              strictly for the purpose of fulfilling your requested service.
+            </p>
+          </section>
+
+          {/* Section 4 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              4. Data Security
+            </h2>
+            <p className="text-gray-600">
+              We take reasonable measures to protect your personal information
+              from unauthorized access, misuse, or disclosure.
+            </p>
+          </section>
+
+          {/* Section 5 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              5. Your Consent
+            </h2>
+            <p className="text-gray-600">
+              By submitting your information through our forms or advertisements,
+              you agree to be contacted by Matanato via phone, SMS, or email
+              regarding your service request.
+            </p>
+          </section>
+
+          {/* Section 6 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              6. Contact Us
+            </h2>
+            <p className="text-gray-600">
+              If you have any questions about this Privacy Policy, please contact us:
+            </p>
+            <div className="mt-3 text-gray-700">
+              <p>Email: info@matanato.com</p>
+              <p>Phone: +1 (346) 800-2250</p>
+            </div>
+          </section>
+
+          {/* Section 7 */}
+          <section>
+            <h2 className="text-xl font-semibold mb-2">
+              7. Updates
+            </h2>
+            <p className="text-gray-600">
+              We may update this Privacy Policy from time to time. Any changes
+              will be posted on this page.
+            </p>
+            <a href="/" className="m-2 text-semibold text-red-600">- back to main page</a>
+          </section>
+
+        </div>
+
+        {/* Footer */}
+        <div className="mt-12 border-t pt-6 text-center text-gray-500 text-sm">
+          Matanato — Quality & Trust
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 // ================= App =================
 export default function App() {
   return (
@@ -335,6 +462,7 @@ export default function App() {
           }
         />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </>
   );
