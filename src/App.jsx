@@ -26,7 +26,7 @@ function Pixel({ service }) {
         s.parentNode.insertBefore(t, s);
       })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
 
-      fbq("init", "YOUR_PIXEL_ID"); // <- вставь свой Pixel ID
+      fbq("init", "1657572898858939"); // <- вставь свой Pixel ID
       fbq("track", "PageView", { service });
     } else {
       fbq("track", "PageView", { service });
