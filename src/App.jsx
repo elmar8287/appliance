@@ -296,9 +296,6 @@ const LeadGen = memo(() => (
 
 // ================= ThankYou Page =================
 function ThankYou() {
-  useEffect(() => {
-    if (window.fbq) fbq("track", "Lead"); // Конверсия Facebook
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-50 px-4">
