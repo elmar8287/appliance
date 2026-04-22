@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import logo from "./data/MATANATO_LOGO.PNG";
 import instants from "./data/klarna.webp";
 import business from "./data/payment_ways.webp";
+import nikki from "./data/nikki.PNG";
+import javid from "./data/javid.PNG";
+import matan from "./data/nextdoormatan.PNG";
 
 // ================= Pixel =================
 function Pixel({ service }) {
@@ -198,6 +201,12 @@ function About() {
 function Benefits() {
   return (
     <section className="py-10 px-4 md:px-10 rounded-2xl shadow-md md:max-w-4xl mx-auto my-12">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">We value our customers' feedback.</h2>
+      <div className="grid md:grid-cols-3 mb-12">
+        <img src={matan} alt="nextdoor-review" className="mb-4 rounded-2xl shadow-2xl"/>
+        <img src={nikki} alt="nextdoor-review" className="mb-4 rounded-2xl shadow-2xl"/>
+         <img src={javid} alt="nextdoor-review" className="rounded-2xl shadow-2xl"/>
+      </div>
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         Don’t Let a Small Problem Turn Into a Big Expense
       </h2>
